@@ -13,6 +13,13 @@ public class UserData {
     private int userAge;
     private String userAddress;
 
+    public static UserData fromParams(
+            String userName,
+            int userAge,
+            String userAdrress) {
+        return new UserData(userName, userAge, userAdrress);
+    }
+
     // getter, settet, toString
     // 기본 생성자, 전체 생성자, 일부 생성자
 
