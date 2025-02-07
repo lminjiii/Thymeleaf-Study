@@ -5,6 +5,8 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
 //@RequiredArgsConstructor
 public class UserData {
     private String userName;
