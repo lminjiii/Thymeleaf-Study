@@ -113,6 +113,12 @@ public class ThymeleafController {
         return "/basic/detail";
     }
 
+    @GetMapping("/condition")
+    public String condition(Model model) {
+        addUser(model);
+        return "/basic/condition";
+    }
+
     private void addUser(Model model) {
         List<UserData> userList = new ArrayList<>(
                 Arrays.asList(
@@ -121,7 +127,8 @@ public class ThymeleafController {
                         new UserData("이서",19, "부산"),
                         new UserData("가을",24, "광주"),
                         new UserData("리즈",22, "울산"),
-                        new UserData("레이",22, "부산")
+                        new UserData("레이",22, "부산"),
+                        new UserData("홍길동",40, "제주")
                 )
         );
         model.addAttribute("userList", userList);
